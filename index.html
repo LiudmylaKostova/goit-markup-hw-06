@@ -64,7 +64,7 @@
         <h1 class="hero-title">
           Эффективные решения для вашего бизнеса
         </h1>
-        <a href="#" class="button primary">Заказать услугу</a>
+        <a href="#" class="button primary" data-modal-open>Заказать услугу</a>
       </div>
     </section>
 
@@ -439,12 +439,16 @@
         </div>
         <div class="footer-form">
           <b class="call-to-action">подпишитесь на рассылку</b>
-          <a href="#" class="button primary">
-            <span> Подписаться </span>
-            <svg class="svg-footer" width="24" height="24">
-              <use xlink:href="./images/sprite2.svg#icon-icon-send"></use>
-            </svg>
-          </a>
+
+          <form action="" class="form-subscribe">
+            <input type="e-mail" name="subscribe-email-footer" class="subscribe-input" placeholder="E-mail">
+            <a href="#" class="button primary">
+              <span> Подписаться </span>
+              <svg class="svg-footer" width="24" height="24">
+                <use xlink:href="./images/sprite2.svg#icon-icon-send"></use>
+              </svg>
+            </a>
+          </form>
         </div>
       </div>
       <!-- <div class="container-bottom-part">
@@ -452,6 +456,70 @@
       </div> -->
     </div>
   </footer>
+
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop-row">
+      <div class="modal">
+        <button class="close-modal-button " data-modal-close>
+          <svg class="close-icon" width="11" height="11">
+
+            <use href="./images/symb.svg#icon-close-icon"> </use>
+
+          </svg>
+        </button>
+        <form class="form" autocomplete="off">
+          <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+          <div role="group">
+            <div class="form-field">
+              <input type="text" name="user-name" id="name" class="form-input" placeholder=" ">
+              <label for="name" class="label-title"> Имя </label>
+              <svg class="modal-svg" width="12" height="12">
+
+                <use href="./images/symb.svg#icon-user-name"> </use>
+
+              </svg>
+            </div>
+            <div class="form-field">
+              <input type="tel" name="user-telefone" id="tel" class="form-input" placeholder=" ">
+              <label for="tel" class="label-title"> Телефон </label>
+              <svg class="modal-svg" width="13" height="13">
+
+                <use href="./images/symb.svg#icon-user-mobile"> </use>
+
+              </svg>
+            </div>
+            <div class="form-field">
+              <input type="email" name="user-email" id="email" class="form-input" placeholder=" ">
+              <label for="email" class="label-title"> Почта </label>
+              <svg class="modal-svg" width="15" height="12">
+
+                <use href="./images/symb.svg#icon-user-email"> </use>
+
+              </svg>
+            </div>
+            <textarea class="comment" name="comment" id="comment" rows="10" placeholder="Комментарий"></textarea>
+            <div class="checkbox-container">
+              <label class="check-box-text">
+                <input class="checkbox" type="checkbox" name="" value="check" name="Policy" value="Policy">
+                <span class="checkbox-icon"> </span>
+                <span> Соглашаюсь с рассылкой и принимаю <a href=""> Условия договора </a> </span>
+              </label>
+            </div>
+          </div>
+          <button class="button modal-button" data-modal-close> Отправить </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
